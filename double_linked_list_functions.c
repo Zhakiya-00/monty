@@ -51,25 +51,14 @@ stack_t *add_dnodeint_end(stack_t **head, const int n)
 		return (*head);
 
 	}
-
 	aux = *head;
-
 	while (aux->next)
-
 		aux = aux->next;
-
 	temp->next = aux->next;
-
 	temp->prev = aux;
-
 	aux->next = temp;
-
 	return (aux->next);
-
 }
-
-
-
 /**
  *add_dnodeint - add a note at the begining of the doubly link list
  *@head: first position of linked list
@@ -118,22 +107,14 @@ stack_t *add_dnodeint(stack_t **head, const int n)
 		*head = temp;
 
 		return (*head);
-
 	}
-
 	(*head)->prev = temp;
 
 	temp->next = (*head);
-
 	temp->prev = NULL;
-
 	*head = temp;
-
 	return (*head);
-
 }
-
-
 /**
  * free_dlistint - frees the doubly linked list
  * @head: head of the list
@@ -141,15 +122,11 @@ stack_t *add_dnodeint(stack_t **head, const int n)
  */
 
 void free_dlistint(stack_t *head)
-
 {
 
 	stack_t *tmp;
 
-
-
 	while ((tmp = head) != NULL)
-
 	{
 
 		head = head->next;
